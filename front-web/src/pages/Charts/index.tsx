@@ -36,13 +36,14 @@ const Charts = () => {
              const barData = buildBarSeries(gamesResponse.data, recordsResponse.data.content);
              setBarChartData(barData);
 
-             const platformChatData = getPlatformChartData(recordsResponse.data.content);
-             setPlatformData(platformChatData);
+             const platformChartData = getPlatformChartData(recordsResponse.data.content);
+             setPlatformData(platformChartData);
 
              const genderChartData = getGenderChartData(recordsResponse.data.content);
              setGenderData(genderChartData);
              
          }
+         getData();
      }, [])
 
     return (
